@@ -1,3 +1,5 @@
+novos_livros = {}
+
 def cadastro_livro(novos_livros):
     while True:
         try:

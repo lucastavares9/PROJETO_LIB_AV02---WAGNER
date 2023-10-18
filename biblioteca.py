@@ -1,3 +1,5 @@
+usuarios = {}
+
 def cadastrar_usuario(usuarios):
     while True:
         try:
