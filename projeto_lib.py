@@ -1,6 +1,11 @@
 import os
 import time
 
+def pausar():
+    
+    input("\nPressione Enter para continuar...")
+
+
 def cadastrar_usuario(usuarios):
     while True:
         try:
@@ -94,10 +99,10 @@ def carrinho_checkout(novos_livros, carrinho, sistema_liberado):
         print("=================================")
         total = calcular_total(novos_livros, carrinho)
         print(f"Total a pagar: R$ {total}")
-        confirmacao = input("Deseja confirmar o checkout? (S/N): ")
+        confirmacao = input("\nDeseja confirmar o checkout? (S/N): ")
         if confirmacao.upper() == "S":
             processar_checkout(novos_livros, carrinho)
-            print("Checkout concluído com sucesso!")
+            print("\nCheckout concluído com sucesso!")
             carrinho.clear()
         else:
             print("Checkout cancelado.")
@@ -161,27 +166,27 @@ while True:
     elif usuario_logado:
         if digito == 3:
             cadastro_livro(novos_livros)
-            time.sleep(1)
+            time.sleep(2)
             os.system("clear")
 
         elif digito == 4:
             listar_livros(novos_livros)
-            time.sleep(1)
+            time.sleep(2)
             os.system("clear")
 
         elif digito == 5:
             alugar_livro(novos_livros, carrinho)
-            time.sleep(1)
+            time.sleep(2)
             os.system("clear")
 
         elif digito == 6:
             visualizar_carrinho(carrinho)
-            time.sleep(1)
+            time.sleep(2)
             os.system("clear")
 
         elif digito == 7:
             carrinho_checkout(novos_livros, carrinho, usuario_logado)
-            time.sleep(1)
+            pausar()
             os.system("clear")
 
         elif digito == 8:
