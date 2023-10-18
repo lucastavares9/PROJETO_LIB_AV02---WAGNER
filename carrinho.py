@@ -17,7 +17,7 @@ def carrinho_checkout(novos_livros, carrinho, sistema_liberado):
         confirmacao = input("Deseja confirmar o checkout? (S/N): ")
         if confirmacao.upper() == "S":
             processar_checkout(novos_livros, carrinho)
-            print("Checkout concluído com sucesso!")
+            print("\nCheckout concluído com sucesso!")
             carrinho.clear()
         else:
             print("Checkout cancelado.")
